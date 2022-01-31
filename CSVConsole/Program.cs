@@ -20,7 +20,7 @@ using (HttpClient client = new HttpClient())
 
             if (responseDTO != null && responseDTO.error)
             {
-                using (var requestMessage = new HttpRequestMessage(HttpMethod.Post, "https://localhost:7169/v1/ActivationRequest/CreateCSV"))
+                using (var requestMessage = new HttpRequestMessage(HttpMethod.Post, "https://biclabs.eastus.cloudapp.azure.com/v1/ActivationRequest/CreateCSV"))
                 {
                     requestMessage.Headers.Add("ApiKey", "51ac497a-a2fb-497b-be90-6eb14923f201");
 
@@ -30,7 +30,7 @@ using (HttpClient client = new HttpClient())
 
                     if (responseDTO != null)
                     {
-                        using (var httpRequestLog = new HttpRequestMessage(HttpMethod.Post, "https://localhost:7169/v1/ProcessLog"))
+                        using (var httpRequestLog = new HttpRequestMessage(HttpMethod.Post, "https://biclabs.eastus.cloudapp.azure.com/v1/ProcessLog"))
                         {
                             httpRequestLog.Headers.Add("ApiKey", "51ac497a-a2fb-497b-be90-6eb14923f201");
                             
